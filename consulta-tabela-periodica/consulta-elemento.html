@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta elemento quimico</title>
+</head>
+<body>
+    <h1>Digite a sigla do elemento quimico a ser consultado</h1>
+    <input type="text" maxlength="2" id="sigla">
+    <button onclick="mostrarElemento()" >Consultar</button>
+    <h1 id = "resultado"></h1>
+    <img id = "imagem" width="300px">
+
+  
+</body>
+<script>
+    var imagem = document.getElementById("imagem");
+    var res;
+    const elementos = {'AC':'Actinio',
+                        'AG':'Prata',
+                        'AL': 'Aluminio',
+                        'AM': 'Americio',
+                        'AR': 'Argonio',
+                        'NA': 'Sodio',
+                        'H': 'Hidrogenio',
+                        'N': 'Nitrogênio'
+                        
+    
+    }
+
+    function mostrarElemento(){
+       var sigla = document.getElementById("sigla").value.toUpperCase()
+       //sigla = toUpperCase(sigla)
+       var resultado = document.getElementById("resultado")
+       resultado.innerText = elementos[sigla]
+       res = elementos[sigla]
+       var imagem = document.getElementById("imagem");
+      
+      switch (res) {
+          
+           case "Actinio":
+               imagem.src = "actinio.jpg" 
+               break;
+            case "Prata":
+              imagem.src = "prata.jpg"
+              break;
+            case "Aluminio":
+                imagem.src = "aluminio.jpg"
+                break; 
+      }
+       
+       return elementos[sigla]
+       
+    }
+    
+    
+    
+</script>
+
+</html>
