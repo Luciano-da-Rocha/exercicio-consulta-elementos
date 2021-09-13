@@ -8,7 +8,9 @@
                         'AR': 'Argonio',
                         'NA': 'Sodio',
                         'H': 'Hidrogenio',
-                        'N': 'Nitrogênio'
+                        'N': 'Nitrogênio',
+                        'Cu': 'Cobre'
+
                         
     
     }
@@ -27,19 +29,21 @@
       switch (res) {
           
            case "Actinio":
-               imagem.src = "actinio.jpg" 
+               imagem.src = "images/actinio.jpg" 
                break;
             case "Prata":
-              imagem.src = "prata.jpg"
+              imagem.src = "images/prata.jpg"
               break;
             case "Aluminio":
-                imagem.src = "aluminio.jpg"
+                imagem.src = "images/aluminio.jpg"
                 break; 
             case "Hidrogenio":
-                imagem.src = "hidrogenio.jpg"
+                imagem.src = "images/hidrogenio.jpg"
                 break;
+                case "Cobre":
+                    imagem.src = "images/cobre.jpg"
             default:
-                imagem.src = "erro.png"
+                imagem.src = "images/erro.png"
                 
                 break;
       }
